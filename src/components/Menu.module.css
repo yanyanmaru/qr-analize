@@ -1,0 +1,21 @@
+.menu{
+    position: sticky;
+    top: 10px;
+    
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    margin-left: 150px;
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px rgb(193, 199, 193);
+    
+}
+
+.content{
+    margin-top: 10px;
+    list-style: none;
+    font-weight: bold;
+}

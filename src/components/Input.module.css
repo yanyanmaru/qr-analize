@@ -1,0 +1,17 @@
+.input{
+    background-color: white;
+    width: 600px;
+    box-shadow: 1px 2px 2px rgb(193, 199, 193);
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.content{
+    background-color: rgb(220, 220, 220);
+    width: 500px;
+    border-radius: 3px;
+    border-style: none;
+    font-size: 30px;
+    padding: 4px;
+    
+}
