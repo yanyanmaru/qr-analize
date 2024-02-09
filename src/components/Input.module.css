@@ -3,15 +3,31 @@
     width: 600px;
     box-shadow: 1px 2px 2px rgb(193, 199, 193);
     padding-top: 30px;
+    padding-bottom: 50px;
     padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.title{
+    margin-bottom: 10px;
 }
 
 .content{
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(252, 252, 252);
     width: 500px;
     border-radius: 3px;
     border-style: none;
-    font-size: 30px;
+    font-size: 20px;
     padding: 4px;
-    
+    outline: 2px solid #e3e3e3;
+}
+
+.content:focus{
+    outline: 2px solid #8093ff;
+}
+
+.attention{
+    color: red;
 }
