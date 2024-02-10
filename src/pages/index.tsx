@@ -17,7 +17,7 @@ export default function Home() {
 
   const [text2, setText2] = useState("");
 
-  const handleChange2 = () => {
+  const handleChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText2(() => e.target.value);
   };
 
