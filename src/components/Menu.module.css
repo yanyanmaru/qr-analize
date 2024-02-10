@@ -1,0 +1,37 @@
+.menu{
+    position: sticky;
+    top: 40px;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    margin-left: 150px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px rgb(193, 199, 193);
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    margin-top: 30px;
+    list-style: none;
+    font-weight: bold;
+    color: gray;
+    font-size: 18px;
+    
+}
+
+.active{
+    color: black;
+    font-weight: bold;
+    
+}
+
+.explain{
+    color: gray;
+    font-size: 15px;
+    margin-top: 5px;
+}
