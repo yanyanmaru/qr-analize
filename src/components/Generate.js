@@ -1,5 +1,7 @@
 import styles from "./Generate.module.css";
 
+
+
 export default function Generate({generateBtn,canClick,generateText}) {
   return (
     <>

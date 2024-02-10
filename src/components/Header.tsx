@@ -12,10 +12,7 @@ export default function Header() {
               <Link className={styles.link} href="/">QR生成</Link>
             </li>
             <li>
-              <Link  className={styles.link} href="/">使い方</Link>
-            </li>
-            <li>
-              <Link className={styles.link} href="/">履歴</Link>
+              <Link className={styles.link} href="/storage">履歴</Link>
             </li>
             <li>
               <Link  className={styles.link} href="/">お問い合わせ</Link>

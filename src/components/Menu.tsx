@@ -18,7 +18,7 @@ export default function Menu({active,active1,active2}:Props) {
         <p className={styles.explain}>ありがとう</p>
         <li className={`${styles.content} ${active2 ? styles.active : ""}`}>③メディア(utm_medium)を入力する</li>
         <p className={styles.explain}>ありがとう</p>
-        <li className={styles.content}>⑤QRコードを生成する</li>
+        <li className={styles.content}>④QRコードを生成する</li>
         <p className={styles.explain}>ありがとう</p>
         <li className={styles.content}>結果</li>
         <p className={styles.explain}>ありがとう</p>

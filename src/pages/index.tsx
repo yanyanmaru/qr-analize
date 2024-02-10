@@ -7,7 +7,6 @@ import { useState } from "react";
 import { useQRCode } from "next-qrcode";
 import Menu from "@/components/Menu";
 import Generate from "@/components/Generate";
-import Detail from "@/components/Detail";
 
 export default function Home() {
   const [text1, setText1] = useState("");
@@ -18,7 +17,7 @@ export default function Home() {
 
   const [text2, setText2] = useState("");
 
-  const handleChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange2 = () => {
     setText2(() => e.target.value);
   };
 
@@ -43,7 +42,7 @@ export default function Home() {
     }
   }
 
-  const generateBtn = () => {
+  const generateBtn = (e: React.ChangeEvent<HTMLInputElement>) => {
     if(text1 == "" || text2 == "" || text3 == ""){
       alert("①②③全て入力してください");
       return;
@@ -108,7 +107,7 @@ export default function Home() {
             />
             <Generate
               generateText={text1+'&utm_source='+text2+'&utm_medium='+text3}
-              canClick={text1 != "" && text2 != "" && text3 != ""}
+              canClick={text1 != "" && text2 != "" && text3 != "" && UrlChecker(text1)}
               generateBtn={generateBtn}
             />
             {text1 != "" && text2 != "" && text3 != "" && generateOn && (
