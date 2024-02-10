@@ -3,12 +3,34 @@ import styles from "./../styles/Home.module.css";
 import Header from "./../components/Header";
 import Input from "./../components/Input";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useQRCode } from "next-qrcode";
 import Menu from "@/components/Menu";
 import Generate from "@/components/Generate";
 
+type Analize = {
+  id: number,
+  text1: string,
+  text2: string,
+  text3: string
+}
+
 export default function Home() {
+  const [analize, setAnalize] = useState<Analize[]>([]);
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('analize') || '[]') as Analize[];
+    if (storedTodos) {
+      setAnalize(storedTodos);
+    }
+  }, []);
+
+  // ToDoリストの変更時にLocalStorageに保存
+  useEffect(() => {
+    localStorage.setItem('analize', JSON.stringify(analize));
+  }, [analize]);
+
+  
+
   const [text1, setText1] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,6 +74,13 @@ export default function Home() {
       return;
     }
     setGenerateOn(true);
+    const newAnalize = {
+      id: Date.now(), // 現在時刻をIDとして使用
+      text1: text1,
+      text2: text2,
+      text3: text3
+    };
+    setAnalize([...analize, newAnalize]);
   };
 
   const { Canvas } = useQRCode();
@@ -129,6 +158,15 @@ export default function Home() {
                 />
               </div>
             )}
+            <div>
+            {analize.map((analize) => (
+                <li key={analize.id}>
+                  {analize.text1}
+                  {analize.text2}
+                  {analize.text3}
+                </li>
+              ))}
+            </div>
           </div>
         </div>
       </main>
