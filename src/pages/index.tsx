@@ -7,6 +7,7 @@ import { useState,useEffect,useRef } from "react";
 
 import Menu from "@/components/Menu";
 import Generate from "@/components/Generate";
+import Copy from "@/components/Copy";
 
 type Analize = {
   id: number,
@@ -109,6 +110,7 @@ const downloadFile = async (url: string): Promise<void> => {
       <main>
         <div className={styles.progressbar}></div>
         <Header />
+        <Copy />
         <div className={styles.twice}>
           <Menu active={active} active1={active1} active2={active2} />
           <div className={styles.second}>
